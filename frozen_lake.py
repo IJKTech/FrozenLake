@@ -9,7 +9,7 @@ import os
 
 #A function to low pass filter a list, this is just to make the plots clearer at the end
 #It serves no purpose with regard to solving the task.
-def low_pass(data, alpha=0.99):
+def low_pass(data, alpha=0.995):
 	low_pass = [data[0]]
 	for i in range(1,len(data)):
 		low_pass.append(alpha*low_pass[-1] + (1.0-alpha)*data[i] )
